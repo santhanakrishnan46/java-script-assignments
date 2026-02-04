@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+  constructor(username) {
+    this.username = username;
+  }
+
+  login() {
+    console.log(`${this.username} logged in.`);
+  }
+}
+
+class Admin extends User {
+  login() {
+    console.log(`Admin ${this.username} logged in with full access.`);
+  }
+
+  deleteUser(username) {
+    console.log(`User ${username} has been deleted.`);
+  }
+}
+
+// Create objects
+const user1 = new User("john");
+const admin1 = new Admin("admin");
+
+// Test methods
+user1.login();
+admin1.login();
+admin1.deleteUser("john");
+
+    </script>
+</body>
+</html>

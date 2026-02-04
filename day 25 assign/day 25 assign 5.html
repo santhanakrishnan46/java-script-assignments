@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class ShoppingCart {
+  constructor() {
+    this.items = [];
+  }
+
+  addItem(name, price) {
+    this.items.push({ name: name, price: price });
+    console.log(name + " added");
+  }
+
+  removeItem(itemName) {
+    this.items = this.items.filter(item => item.name !== itemName);
+    console.log(itemName + " removed");
+  }
+
+  getTotalPrice() {
+    let total = 0;
+    for (let item of this.items) {
+      total += item.price;
+    }
+    return total;
+  }
+}
+
+// Create cart
+const cart = new ShoppingCart();
+
+// Add items
+cart.addItem("Book", 10);
+cart.addItem("Pen", 5);
+cart.addItem("Bag", 30);
+
+// Calculate total price
+console.log("Total Price:", cart.getTotalPrice());
+``
+
+    </script>
+</body>
+</html>

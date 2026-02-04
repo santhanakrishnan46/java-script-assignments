@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student {
+  constructor(name, marks) {
+    this.name = name;
+    this.marks = marks;
+  }
+
+  getGrade() {
+    if (this.marks >= 90) {
+      return "A";
+    } else if (this.marks >= 75) {
+      return "B";
+    } else if (this.marks >= 50) {
+      return "C";
+    } else {
+      return "Fail";
+    }
+  }
+}
+
+// Create student objects
+const student1 = new Student("Alex", 92);
+const student2 = new Student("Sara", 68);
+
+// Display grades
+console.log(`${student1.name}'s Grade: ${student1.getGrade()}`);
+console.log(`${student2.name}'s Grade: ${student2.getGrade()}`);
+
+    </script>
+</body>
+</html>

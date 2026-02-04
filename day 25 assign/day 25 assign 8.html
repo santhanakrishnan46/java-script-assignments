@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Shape {
+  getArea() {
+    return 0;
+  }
+}
+
+class Rectangle extends Shape {
+  constructor(length, width) {
+    super();
+    this.length = length;
+    this.width = width;
+  }
+
+  getArea() {
+    return this.length * this.width;
+  }
+}
+
+// Create objects
+const shape = new Shape();
+const rectangle = new Rectangle(10, 5);
+
+// Call getArea
+console.log("Shape Area:", shape.getArea());
+console.log("Rectangle Area:", rectangle.getArea());
+
+    </script>
+</body>
+</html>

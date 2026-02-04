@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Vehicle {
+  constructor(brand, speed) {
+    this.brand = brand;
+    this.speed = speed;
+  }
+
+  accelerate(value) {
+    this.speed += value;
+    console.log(`Speed increased to ${this.speed} km/h`);
+  }
+}
+
+class ElectricCar extends Vehicle {
+  constructor(brand, speed, batteryLevel) {
+    super(brand, speed);
+    this.batteryLevel = batteryLevel;
+  }
+
+  chargeBattery() {
+    this.batteryLevel = 100;
+    console.log("Battery fully charged!");
+  }
+}
+
+// Create object
+const myCar = new ElectricCar("Tesla", 60, 40);
+
+// Test methods
+myCar.accelerate(20);
+myCar.chargeBattery();
+
+    </script>
+</body>
+</html>
